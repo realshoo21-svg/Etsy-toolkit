@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="gradA" x1="0" x2="1">
+      <stop offset="0%" stop-color="#FF7A59"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18" result="b" />
+      <feOffset dy="6"/>
+      <feMerge><feMergeNode in="b"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- floating particles -->
+  <g id="particles" opacity="0.9">
+    <circle cx="220" cy="120" r="10" fill="url(#gradA)" opacity="0.95"/>
+    <circle cx="420" cy="60" r="6" fill="#FFB457" opacity="0.9"/>
+    <circle cx="520" cy="180" r="8" fill="#8B5CF6" opacity="0.85"/>
+    <circle cx="300" cy="230" r="5" fill="#FFD9A8" opacity="0.9"/>
+  </g>
+
+  <!-- curved glowing connections -->
+  <g stroke="url(#gradA)" stroke-width="3" fill="none" opacity="0.92">
+    <path class="conn" d="M260,140 C360,60 480,80 560,130" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="conn" d="M500,190 C640,230 760,210 860,160" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- toolbox (glass) -->
+  <g transform="translate(200,120)">
+    <rect x="0" y="0" rx="18" ry="18" width="280" height="160" fill="rgba(255,255,255,0.6)" stroke="rgba(255,255,255,0.5)"/>
+    <g transform="translate(18,14)">
+      <rect width="84" height="84" rx="12" fill="#FFF6F3"/>
+      <rect x="100" y="6" width="150" height="18" rx="8" fill="#fff"/>
+      <rect x="100" y="32" width="110" height="12" rx="6" fill="#fff" opacity="0.9"/>
+      <g transform="translate(0,94)">
+        <rect width="260" height="44" rx="12" fill="#FFF8F6"/>
+      </g>
+    </g>
+    <g transform="translate(80,18)">
+      <g transform="translate(140,8)">
+        <g id="ai-brain" transform="scale(0.9)">
+          <circle cx="0" cy="0" r="18" fill="url(#gradA)"/>
+          <path d="M-6,-6 L6,6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6,-6 L-6,6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- product card floating -->
+  <g transform="translate(560,80)">
+    <rect x="0" y="0" rx="16" ry="16" width="260" height="320" fill="rgba(255,255,255,0.7)" stroke="rgba(255,255,255,0.5)"/>
+    <image x="14" y="14" width="232" height="160" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='232' height='160'><rect width='232' height='160' rx='10' fill='%23FFF1E6'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%23FF7A59' font-size='18' font-family='Inter'>Product Photo</text></svg>"/>
+    <rect x="14" y="186" width="180" height="18" rx="8" fill="#fff"/>
+    <rect x="14" y="210" width="120" height="12" rx="6" fill="#fff" opacity="0.95"/>
+    <g transform="translate(14,232)">
+      <circle cx="0" cy="8" r="6" fill="#FFB457"/>
+      <circle cx="26" cy="8" r="6" fill="#8B5CF6"/>
+      <circle cx="52" cy="8" r="6" fill="#FF7A59"/>
+    </g>
+  </g>
+
+  <!-- charts and analytics small -->
+  <g transform="translate(860,140)">
+    <rect x="0" y="0" rx="12" width="220" height="120" fill="rgba(255,255,255,0.7)"/>
+    <rect x="14" y="14" width="28" height="60" rx="6" fill="#FF7A59"/>
+    <rect x="52" y="14" width="28" height="88" rx="6" fill="#8B5CF6"/>
+    <rect x="90" y="14" width="28" height="44" rx="6" fill="#FFB457"/>
+  </g>
+
+</svg>
