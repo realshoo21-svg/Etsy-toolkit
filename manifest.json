@@ -1,0 +1,16 @@
+{
+  "name": "Etsy Toolkit",
+  "short_name": "EtsyTool",
+  "description": "A modern Etsy seller toolkit for fees, profit, titles, and tags.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff8f2",
+  "theme_color": "#F1641E",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Crect width='128' height='128' rx='28' fill='%23F1641E'/%3E%3Cpath fill='white' d='M35 34h58c11 0 20 9 20 20v10H35V34zM35 70h78v24c0 11-9 20-20 20H35V70z'/%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

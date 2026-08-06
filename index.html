@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modern Etsy seller toolkit with fee, profit, title, and tag tools for faster shop growth." />
+    <meta name="theme-color" content="#F1641E" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Etsy Toolkit | Seller Growth Essentials</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+
+    <header class="topbar">
+      <div class="brand" aria-label="Etsy Toolkit home">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 80 80" role="img">
+            <path d="M20 22c0-7 5-12 12-12h16c7 0 12 5 12 12v12h-8V22c0-2-2-4-4-4H32c-2 0-4 2-4 4v12h-8z" />
+            <path d="M16 36h48v8H16z" />
+            <path d="M24 44h32c10 0 16 7 16 16v4H8v-4c0-9 6-16 16-16z" />
+          </svg>
+        </div>
+        <div>
+          <p class="brand-eyebrow">Etsy seller toolkit</p>
+          <h1>Etsy Toolkit</h1>
+        </div>
+      </div>
+
+      <div class="top-actions">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Toggle color theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+        <button id="installBtn" class="ghost-btn" type="button" hidden>Install App</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero card">
+        <div class="hero-content">
+          <p class="pill">✨ Built for modern Etsy sellers</p>
+          <h2>Turn every listing into a smarter sale.</h2>
+          <p class="hero-copy">
+            Create faster, clearer listings with polished tools for fees, profit, titles, and tags in one calm workspace.
+          </p>
+          <div class="hero-stats">
+            <div>
+              <strong>4</strong>
+              <span>Essential tools</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Responsive</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Seller-ready</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="mini-card">
+            <p>Average estimated fee</p>
+            <h3 id="heroFee">$8.75</h3>
+          </div>
+          <div class="mini-card accent">
+            <p>Profit clarity</p>
+            <h3>Fast insights</h3>
+          </div>
+        </div>
+      </section>
+
+      <section class="tool-grid" aria-label="Etsy seller tools">
+        <article class="card tool-card">
+          <div class="tool-heading">
+            <div>
+              <p class="tool-kicker">Tool 1</p>
+              <h3>Etsy Fee Calculator</h3>
+            </div>
+            <span class="tool-badge">Fee-aware</span>
+          </div>
+          <form id="feeForm" class="tool-form">
+            <label>
+              Listing price
+              <input type="number" name="price" min="0" step="0.01" value="24" required />
+            </label>
+            <label>
+              Shipping
+              <input type="number" name="shipping" min="0" step="0.01" value="4" />
+            </label>
+            <label>
+              Quantity
+              <input type="number" name="quantity" min="1" step="1" value="1" />
+            </label>
+            <div class="inline-fields">
+              <label>
+                Transaction fee %
+                <input type="number" name="transactionFee" min="0" step="0.1" value="6.5" />
+              </label>
+              <label>
+                Processing fee %
+                <input type="number" name="processingFee" min="0" step="0.1" value="3" />
+              </label>
+            </div>
+            <label>
+              Processing fixed fee
+              <input type="number" name="processingFixed" min="0" step="0.01" value="0.25" />
+            </label>
+            <button type="submit">Calculate fees</button>
+          </form>
+          <div class="result-box" id="feeResult" aria-live="polite"></div>
+        </article>
+
+        <article class="card tool-card">
+          <div class="tool-heading">
+            <div>
+              <p class="tool-kicker">Tool 2</p>
+              <h3>Etsy Profit Calculator</h3>
+            </div>
+            <span class="tool-badge">Profit-first</span>
+          </div>
+          <form id="profitForm" class="tool-form">
+            <label>
+              Item cost
+              <input type="number" name="cost" min="0" step="0.01" value="8" required />
+            </label>
+            <label>
+              Listing price
+              <input type="number" name="price" min="0" step="0.01" value="24" required />
+            </label>
+            <label>
+              Shipping
+              <input type="number" name="shipping" min="0" step="0.01" value="4" />
+            </label>
+            <div class="inline-fields">
+              <label>
+                Transaction fee %
+                <input type="number" name="transactionFee" min="0" step="0.1" value="6.5" />
+              </label>
+              <label>
+                Processing fee %
+                <input type="number" name="processingFee" min="0" step="0.1" value="3" />
+              </label>
+            </div>
+            <label>
+              Processing fixed fee
+              <input type="number" name="processingFixed" min="0" step="0.01" value="0.25" />
+            </label>
+            <button type="submit">Calculate profit</button>
+          </form>
+          <div class="result-box" id="profitResult" aria-live="polite"></div>
+        </article>
+
+        <article class="card tool-card">
+          <div class="tool-heading">
+            <div>
+              <p class="tool-kicker">Tool 3</p>
+              <h3>Etsy Title Generator</h3>
+            </div>
+            <span class="tool-badge">SEO-ready</span>
+          </div>
+          <form id="titleForm" class="tool-form">
+            <label>
+              Keywords
+              <input type="text" name="keywords" placeholder="ceramic mug, cozy, gift" required />
+            </label>
+            <label>
+              Category
+              <select name="category">
+                <option value="Home Decor">Home Decor</option>
+                <option value="Jewelry">Jewelry</option>
+                <option value="Craft Supplies">Craft Supplies</option>
+                <option value="Personalized Gifts">Personalized Gifts</option>
+                <option value="Wedding">Wedding</option>
+              </select>
+            </label>
+            <button type="submit">Generate title ideas</button>
+          </form>
+          <div class="result-box" id="titleResult" aria-live="polite"></div>
+        </article>
+
+        <article class="card tool-card">
+          <div class="tool-heading">
+            <div>
+              <p class="tool-kicker">Tool 4</p>
+              <h3>Etsy Tag Generator</h3>
+            </div>
+            <span class="tool-badge">Smart tags</span>
+          </div>
+          <form id="tagForm" class="tool-form">
+            <label>
+              Keywords
+              <input type="text" name="keywords" placeholder="boho, candle, handmade" required />
+            </label>
+            <label>
+              Category
+              <input type="text" name="category" placeholder="Home decor" />
+            </label>
+            <button type="submit">Generate tags</button>
+          </form>
+          <div class="result-box" id="tagResult" aria-live="polite"></div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Created by Shoo</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
